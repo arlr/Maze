@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Banner_01.obj-eb1d9aa5b603a6aed42d7c8918fea220.mesh"
+
+[deps]
+
+files=[ "res://.import/Banner_01.obj-eb1d9aa5b603a6aed42d7c8918fea220.mesh" ]
+
+source_file="res://medieval-town-base/Models/Banner_01.obj"
+dest_files=[ "res://.import/Banner_01.obj-eb1d9aa5b603a6aed42d7c8918fea220.mesh", "res://.import/Banner_01.obj-eb1d9aa5b603a6aed42d7c8918fea220.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

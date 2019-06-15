@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Roof_Inner_Corner_Green_01.obj-d0d13b82d39bb9dd603e5df65ce825ea.mesh"
+
+[deps]
+
+files=[ "res://.import/Roof_Inner_Corner_Green_01.obj-d0d13b82d39bb9dd603e5df65ce825ea.mesh" ]
+
+source_file="res://medieval-town-base/Models/Roof_Inner_Corner_Green_01.obj"
+dest_files=[ "res://.import/Roof_Inner_Corner_Green_01.obj-d0d13b82d39bb9dd603e5df65ce825ea.mesh", "res://.import/Roof_Inner_Corner_Green_01.obj-d0d13b82d39bb9dd603e5df65ce825ea.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

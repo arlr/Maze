@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Grey_Pole_01.obj-678f13d448e2389a1061e4bc32cb255f.mesh"
+
+[deps]
+
+files=[ "res://.import/Grey_Pole_01.obj-678f13d448e2389a1061e4bc32cb255f.mesh" ]
+
+source_file="res://medieval-town-base/Models/Grey_Pole_01.obj"
+dest_files=[ "res://.import/Grey_Pole_01.obj-678f13d448e2389a1061e4bc32cb255f.mesh", "res://.import/Grey_Pole_01.obj-678f13d448e2389a1061e4bc32cb255f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

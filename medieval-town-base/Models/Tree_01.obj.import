@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Tree_01.obj-e235c1aaf1ccbe34db315ef0bebdb708.mesh"
+
+[deps]
+
+files=[ "res://.import/Tree_01.obj-e235c1aaf1ccbe34db315ef0bebdb708.mesh" ]
+
+source_file="res://medieval-town-base/Models/Tree_01.obj"
+dest_files=[ "res://.import/Tree_01.obj-e235c1aaf1ccbe34db315ef0bebdb708.mesh", "res://.import/Tree_01.obj-e235c1aaf1ccbe34db315ef0bebdb708.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

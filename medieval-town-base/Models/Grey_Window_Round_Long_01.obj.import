@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Grey_Window_Round_Long_01.obj-6aee2c79f3858823e666e874a458d785.mesh"
+
+[deps]
+
+files=[ "res://.import/Grey_Window_Round_Long_01.obj-6aee2c79f3858823e666e874a458d785.mesh" ]
+
+source_file="res://medieval-town-base/Models/Grey_Window_Round_Long_01.obj"
+dest_files=[ "res://.import/Grey_Window_Round_Long_01.obj-6aee2c79f3858823e666e874a458d785.mesh", "res://.import/Grey_Window_Round_Long_01.obj-6aee2c79f3858823e666e874a458d785.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

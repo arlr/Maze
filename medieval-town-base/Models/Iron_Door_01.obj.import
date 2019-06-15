@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Iron_Door_01.obj-04d075cf1fb1f051a1e616f3f58e38e9.mesh"
+
+[deps]
+
+files=[ "res://.import/Iron_Door_01.obj-04d075cf1fb1f051a1e616f3f58e38e9.mesh" ]
+
+source_file="res://medieval-town-base/Models/Iron_Door_01.obj"
+dest_files=[ "res://.import/Iron_Door_01.obj-04d075cf1fb1f051a1e616f3f58e38e9.mesh", "res://.import/Iron_Door_01.obj-04d075cf1fb1f051a1e616f3f58e38e9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

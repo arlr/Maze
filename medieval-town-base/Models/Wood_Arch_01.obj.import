@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Wood_Arch_01.obj-73ffa8e431157f8d8c43243b33630773.mesh"
+
+[deps]
+
+files=[ "res://.import/Wood_Arch_01.obj-73ffa8e431157f8d8c43243b33630773.mesh" ]
+
+source_file="res://medieval-town-base/Models/Wood_Arch_01.obj"
+dest_files=[ "res://.import/Wood_Arch_01.obj-73ffa8e431157f8d8c43243b33630773.mesh", "res://.import/Wood_Arch_01.obj-73ffa8e431157f8d8c43243b33630773.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

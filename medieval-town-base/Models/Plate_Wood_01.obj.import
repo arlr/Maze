@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Plate_Wood_01.obj-0657110803fe5d844a10e0a006374ef1.mesh"
+
+[deps]
+
+files=[ "res://.import/Plate_Wood_01.obj-0657110803fe5d844a10e0a006374ef1.mesh" ]
+
+source_file="res://medieval-town-base/Models/Plate_Wood_01.obj"
+dest_files=[ "res://.import/Plate_Wood_01.obj-0657110803fe5d844a10e0a006374ef1.mesh", "res://.import/Plate_Wood_01.obj-0657110803fe5d844a10e0a006374ef1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

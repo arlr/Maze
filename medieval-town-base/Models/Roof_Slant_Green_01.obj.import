@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Roof_Slant_Green_01.obj-38c6e72818809c2f59a55994395a2161.mesh"
+
+[deps]
+
+files=[ "res://.import/Roof_Slant_Green_01.obj-38c6e72818809c2f59a55994395a2161.mesh" ]
+
+source_file="res://medieval-town-base/Models/Roof_Slant_Green_01.obj"
+dest_files=[ "res://.import/Roof_Slant_Green_01.obj-38c6e72818809c2f59a55994395a2161.mesh", "res://.import/Roof_Slant_Green_01.obj-38c6e72818809c2f59a55994395a2161.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

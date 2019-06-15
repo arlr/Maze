@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Grey_Corner_01.obj-c78d46703233e3438c7fdb4a60b687c1.mesh"
+
+[deps]
+
+files=[ "res://.import/Grey_Corner_01.obj-c78d46703233e3438c7fdb4a60b687c1.mesh" ]
+
+source_file="res://medieval-town-base/Models/Grey_Corner_01.obj"
+dest_files=[ "res://.import/Grey_Corner_01.obj-c78d46703233e3438c7fdb4a60b687c1.mesh", "res://.import/Grey_Corner_01.obj-c78d46703233e3438c7fdb4a60b687c1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

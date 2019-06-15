@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Grey_Slanted_Wall_01.obj-dc027324902094947b49dfc390c86561.mesh"
+
+[deps]
+
+files=[ "res://.import/Grey_Slanted_Wall_01.obj-dc027324902094947b49dfc390c86561.mesh" ]
+
+source_file="res://medieval-town-base/Models/Grey_Slanted_Wall_01.obj"
+dest_files=[ "res://.import/Grey_Slanted_Wall_01.obj-dc027324902094947b49dfc390c86561.mesh", "res://.import/Grey_Slanted_Wall_01.obj-dc027324902094947b49dfc390c86561.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
