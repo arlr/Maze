@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Code/Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Camera.gd" type="Script" id=2]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -13,8 +14,6 @@ albedo_color = Color( 0.392157, 0.431373, 0.870588, 1 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
 script = ExtResource( 1 )
-poid_g = 67
-jump_Force = 78
 
 [node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
 mesh = SubResource( 1 )
@@ -25,3 +24,4 @@ shape = SubResource( 3 )
 
 [node name="Camera" type="Camera" parent="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 0.93562, 0.35301, 0, -0.35301, 0.93562, 0, 3.07099, 7.61686 )
+script = ExtResource( 2 )
