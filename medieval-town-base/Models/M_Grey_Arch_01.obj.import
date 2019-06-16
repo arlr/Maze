@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/M_Grey_Arch_01.obj-f73c99214fc2d7d574227dba4c022a8c.mesh"
+
+[deps]
+
+files=[ "res://.import/M_Grey_Arch_01.obj-f73c99214fc2d7d574227dba4c022a8c.mesh" ]
+
+source_file="res://medieval-town-base/Models/M_Grey_Arch_01.obj"
+dest_files=[ "res://.import/M_Grey_Arch_01.obj-f73c99214fc2d7d574227dba4c022a8c.mesh", "res://.import/M_Grey_Arch_01.obj-f73c99214fc2d7d574227dba4c022a8c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
