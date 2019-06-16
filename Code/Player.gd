@@ -29,6 +29,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_up"):
 		dir.z -= 1
 		
+	
+		
 	dir.y = 0
 	dir = dir.normalized()
 	
@@ -48,5 +50,5 @@ func _physics_process(delta):
 	velocity.x = hv.x
 	velocity.z = hv.z
 	
-	velocity = move_and_slide(velocity, Vector3(1,1,1))
+	velocity = move_and_slide(velocity, Vector3(0,1,0))	#deplacement tant que l'on ne rencontre pas d'objet
 		
