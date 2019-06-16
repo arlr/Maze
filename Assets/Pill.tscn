@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="CapsuleMesh" id=1]
 
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.800781, 0.103226, 0.789882, 1 )
+metallic = 0.3
+metallic_specular = 0.61
+roughness = 0.09
+
 [sub_resource type="CapsuleShape" id=2]
 radius = 0.809288
-height = 3.24914
+height = 4.10231
 
 [node name="Pill" type="Spatial"]
 
@@ -13,7 +19,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Area"]
 mesh = SubResource( 1 )
-material/0 = null
+material/0 = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 2 )

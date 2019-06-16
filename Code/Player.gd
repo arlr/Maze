@@ -28,16 +28,18 @@ func _physics_process(delta):
 		dir.z += 1
 	if Input.is_action_pressed("ui_up"):
 		dir.z -= 1
-		
+	
+	if is_on_floor() and Input.is_action_pressed("ui_accept"):
+		dir.y += 10
 	
 		
-	dir.y = 0
+	#dir.y = 1
 	dir = dir.normalized()
 	
 	velocity.y += delta * gravity
 	
 	var hv = velocity
-	hv.y = 0
+	#hv.y = 0
 	
 	var new_pos = dir * SPEED
 	var accel = DE_ACCELERATION
@@ -49,6 +51,7 @@ func _physics_process(delta):
 	
 	velocity.x = hv.x
 	velocity.z = hv.z
+	velocity.y = hv.y
 	
 	velocity = move_and_slide(velocity, Vector3(0,1,0))	#deplacement tant que l'on ne rencontre pas d'objet
 		
