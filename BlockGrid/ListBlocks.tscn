@@ -1,23 +1,46 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/Floor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Pill.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Wall.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Arrive.tscn" type="PackedScene" id=5]
+[ext_resource path="res://3D_Models/arrive.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://3D_Models/lamp.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://3D_Models/Mur.obj" type="ArrayMesh" id=3]
 
-[node name="ListBlocks" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( 1, -0.001287, 1, 1, -0.001287, -1, -1, -0.001287, 1, -1, -0.001287, -1, -1, 1.99871, -1, 1, 1.99871, -0.999999, -1, 1.99871, 1, 0.999999, 1.99871, 1, 1, 1.99871, -0.999999, 1, -0.001287, -1, 0.999999, 1.99871, 1, 1, -0.001287, 1, 0.999999, 1.99871, 1, 1, -0.001287, 1, -1, 1.99871, 1, -1, -0.001287, 1, -1, 1.99871, 1, -1, -0.001287, 1, -1, 1.99871, -1, -1, -0.001287, -1, 1, -0.001287, -1, 1, 1.99871, -0.999999, -1, -0.001287, -1, -1, 1.99871, -1 )
 
-[node name="Floor" parent="." instance=ExtResource( 1 )]
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( 1, -0.001287, 1, 1, -0.001287, -1, -1, -0.001287, 1, -1, -0.001287, -1, -1, 1.99871, -1, 1, 1.99871, -0.999999, -1, 1.99871, 1, 0.999999, 1.99871, 1, 1, 1.99871, -0.999999, 1, -0.001287, -1, 0.999999, 1.99871, 1, 1, -0.001287, 1, 0.999999, 1.99871, 1, 1, -0.001287, 1, -1, 1.99871, 1, -1, -0.001287, 1, -1, 1.99871, 1, -1, -0.001287, 1, -1, 1.99871, -1, -1, -0.001287, -1, 1, -0.001287, -1, 1, 1.99871, -0.999999, -1, -0.001287, -1, -1, 1.99871, -1 )
 
-[node name="Pill" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2495, -3.32666 )
+[sub_resource type="ConvexPolygonShape" id=7]
+points = PoolVector3Array( 1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, -1, 2, -1, 1, 2, -0.999999, -1, 2, 1, 0.999999, 2, 1, 1, 2, -0.999999, 1, 0, -1, 0.999999, 2, 1, 1, 0, 1, 0.999999, 2, 1, 1, 0, 1, -1, 2, 1, -1, 0, 1, -1, 2, 1, -1, 0, 1, -1, 2, -1, -1, 0, -1, 1, 0, -1, 1, 2, -0.999999, -1, 0, -1, -1, 2, -1 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.13357, 0 )
+[node name="Spatial" type="Spatial"]
 
-[node name="Wall" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0172634, 2.50914, 3.54908 )
+[node name="arrive" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.72371, 0.302511, -6.78801 )
+mesh = ExtResource( 1 )
+material/0 = null
 
-[node name="Arrive" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.772, 0 )
+[node name="StaticBody" type="StaticBody" parent="arrive"]
+
+[node name="CollisionShape" type="CollisionShape" parent="arrive/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="lamp" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57804, 0.22741, -5.80685 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="lamp"]
+
+[node name="CollisionShape" type="CollisionShape" parent="lamp/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Mur" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.20074, 0.43639, -2.89043 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Mur"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Mur/StaticBody"]
+shape = SubResource( 7 )

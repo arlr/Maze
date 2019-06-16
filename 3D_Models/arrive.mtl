@@ -1,0 +1,12 @@
+# Blender MTL File: 'arrive.blend'
+# Material Count: 1
+
+newmtl Material
+Ns 1.960784
+Ka 1.000000 1.000000 1.000000
+Kd 0.018441 0.042408 0.523333
+Ks 0.010635 0.204919 0.708333
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
