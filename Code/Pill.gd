@@ -17,4 +17,5 @@ func _process(delta):
 
 func _on_Area_body_entered(body):
 	if body is KinematicBody:
+		print("Collect 1 Pill")
 		queue_free()

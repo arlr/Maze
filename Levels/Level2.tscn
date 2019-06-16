@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Levels/Level2.gd" type="Script" id=1]
 [ext_resource path="res://BlockGrid/BlockGrid.meshlib" type="MeshLibrary" id=2]
 [ext_resource path="res://Assets/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Arrive.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Pill.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ProceduralSky" id=2]
 sky_top_color = Color( 1, 1, 1, 1 )
@@ -44,4 +45,5 @@ shadow_enabled = true
 [node name="Arrive" parent="." instance=ExtResource( 4 )]
 transform = Transform( 3.40329, 0, 0, 0, 1.10303, 0, 0, 0, 3.99753, -21.3851, 3.01538, 15.3386 )
 
-[node name="Node" type="Node" parent="."]
+[node name="Pill" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.92709, 3, 7.60046 )
