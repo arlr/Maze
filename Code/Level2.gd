@@ -4,9 +4,11 @@ extends Spatial
 # var a = 2
 # var b = "text"
 
-# Called when the node enters the scene tree for the first time.
+
+var counterPill
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	counterPill = 12
 
 func _input(event):
 	
