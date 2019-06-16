@@ -8,12 +8,12 @@ height = 3.24914
 
 [node name="Pill" type="Spatial"]
 
-[node name="RigidBody" type="RigidBody" parent="."]
+[node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
-[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+[node name="MeshInstance" type="MeshInstance" parent="Area"]
 mesh = SubResource( 1 )
 material/0 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 2 )

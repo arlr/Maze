@@ -7,8 +7,8 @@ var gravity = -9.81
 var velocity = Vector3()
 var camera
 
-const SPEED = 6
-const ACCELERATION = 3
+const SPEED = 15
+const ACCELERATION = 6
 const DE_ACCELERATION = 5
 # Called when the node enters the scene tree for the first time.
 func _ready():

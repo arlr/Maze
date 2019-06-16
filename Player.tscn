@@ -22,4 +22,4 @@ material/0 = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.93562, 0.35301, 0, -0.35301, 0.93562, 0, 3.51874, 9.49153 )
+transform = Transform( 1, 0, 0, 0, 0.93562, 0.35301, 0, -0.35301, 0.93562, 0, 3.07099, 7.61686 )

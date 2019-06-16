@@ -15,12 +15,12 @@ emission_on_uv2 = false
 
 [node name="Wall" type="Spatial"]
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
-
-[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 3 )

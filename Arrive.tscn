@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="Arrive" type="Spatial"]
+
+[node name="Area" type="Area" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Area"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
