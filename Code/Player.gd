@@ -5,14 +5,18 @@ extends KinematicBody
 # var b = "text"
 var gravity = -9.81
 var velocity = Vector3()
-var camera
+var hitCount = get_slide_count()
+
+export var poid_g = 10
+export var jump_Force = 10
+
 
 const SPEED = 15
 const ACCELERATION = 6
 const DE_ACCELERATION = 5
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	camera = get_node("../Camera").get_global_transform()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -29,29 +33,21 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_up"):
 		dir.z -= 1
 	
-	if is_on_floor() and Input.is_action_pressed("ui_accept"):
-		dir.y += 10
-	
 		
 	#dir.y = 1
 	dir = dir.normalized()
+	dir = dir * SPEED * delta
 	
-	velocity.y += delta * gravity
-	
-	var hv = velocity
-	#hv.y = 0
-	
-	var new_pos = dir * SPEED
-	var accel = DE_ACCELERATION
-		
-	if (dir.dot(hv) > 0):
-		accel = ACCELERATION
-	
-	hv = hv.linear_interpolate(new_pos, accel * delta)
-	
-	velocity.x = hv.x
-	velocity.z = hv.z
-	velocity.y = hv.y
+	velocity.y += gravity * delta * poid_g
+	velocity.x = dir.x * SPEED
+	velocity.z = dir.z * SPEED
 	
 	velocity = move_and_slide(velocity, Vector3(0,1,0))	#deplacement tant que l'on ne rencontre pas d'objet
-		
+	
+	if is_on_floor() and Input.is_action_pressed("ui_accept"):
+		velocity.y += jump_Force
+
+	if hitCount > 0:
+		var collision = get_slide_collision(0)
+		if collision.collider is RigidBody:
+			collision.collider.applt_implulse(collision.position, -collision.normal)
