@@ -25,7 +25,7 @@ func _on_Area_body_entered(body):
 		var LabelCounter = get_node("../../Player/HUD/NombrePill")
 		counter += 1
 		get_parent().get_parent().get_parent().counterPill = counter
-		print(counter)
+		print("Nb pill : " + str(counter))
 		print("Collect 1 Pill")
 		LabelCounter.set_text("NB Pill : "+str(counter))
 		queue_free()
