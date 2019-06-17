@@ -16,7 +16,7 @@ margin_right = 1023.0
 margin_bottom = 27.0
 text = "Nb Pill"
 
-[node name="Label" type="Label" parent="."]
+[node name="Temps" type="Label" parent="."]
 margin_left = 2.0
 margin_top = 552.0
 margin_right = 157.0
