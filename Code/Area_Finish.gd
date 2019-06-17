@@ -6,7 +6,10 @@ extends Area
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	print(get_parent().name)
+	print(get_parent().get_parent().name)
+	print(get_parent().get_parent().get_parent().name)
+	print(get_parent().get_parent().get_parent().get_parent().name)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -16,3 +19,6 @@ func _ready():
 func _on_Area_Finish_body_entered(body):
 	if body is KinematicBody:
 		print("WIN")
+
+		get_parent().get_parent().get_parent().get_node("Timer").set_autostart(false)
+		get_parent().get_parent().get_parent().get_node("Timer").stop()
