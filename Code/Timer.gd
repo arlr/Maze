@@ -15,7 +15,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if self.get_time_left() == 0:
+	var finish = get_node("../GridMap/Arrive/Area_Finish").finished
+	if (self.get_time_left() == 0) and (finish == false):
 		self.start(0.1)	# conteur toute les  100ms
 		temps += 1
 		printTime()
