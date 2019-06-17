@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/Menu_FontDynamic.tres" type="DynamicFont" id=1]
+
+[node name="Escape_Menu" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 450.0
+margin_top = 10.0
+margin_right = 633.0
+margin_bottom = 102.0
+custom_fonts/font = ExtResource( 1 )
+text = "MAZE"
+align = 1
+valign = 1
+
+[node name="BP_Continer" type="MenuButton" parent="."]
+margin_left = 370.0
+margin_top = 140.0
+margin_right = 710.0
+margin_bottom = 238.0
+custom_fonts/font = ExtResource( 1 )
+text = "Continer"
+
+[node name="BP_Menu" type="MenuButton" parent="."]
+margin_left = 370.0
+margin_top = 260.0
+margin_right = 710.0
+margin_bottom = 358.0
+custom_fonts/font = ExtResource( 1 )
+text = "Menu"
+
+[node name="BP_Quitter" type="MenuButton" parent="."]
+margin_left = 370.0
+margin_top = 380.0
+margin_right = 710.0
+margin_bottom = 478.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quitter"
