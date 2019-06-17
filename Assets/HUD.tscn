@@ -15,26 +15,30 @@ font_data = ExtResource( 1 )
 size = 36
 font_data = ExtResource( 1 )
 
-[node name="HUD" type="Node2D"]
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="FPSCounter" type="Label" parent="."]
-margin_right = 84.0
-margin_bottom = 33.0
+margin_left = 1.05267
+margin_top = 3.1579
+margin_right = 85.0527
+margin_bottom = 36.1579
 custom_fonts/font = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="NombrePill" type="Label" parent="."]
-margin_left = 862.0
-margin_top = 1.0
-margin_right = 1023.0
-margin_bottom = 34.0
+margin_left = 1114.63
+margin_top = 15.7369
+margin_right = 1275.63
+margin_bottom = 48.7369
 custom_fonts/font = SubResource( 2 )
-text = "Nb Pill"
+text = "NB Pill : 0"
 
 [node name="Temps" type="Label" parent="."]
 margin_left = 2.0
-margin_top = 552.0
+margin_top = 640.422
 margin_right = 157.0
-margin_bottom = 600.0
+margin_bottom = 688.422
 custom_fonts/font = SubResource( 3 )
 text = "Temps :"
