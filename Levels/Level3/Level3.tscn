@@ -1,11 +1,16 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Code/Level3.gd" type="Script" id=1]
+[ext_resource path="res://Levels/Level3/Level3.gd" type="Script" id=1]
 [ext_resource path="res://BlockGrid/BlockGrid.meshlib" type="MeshLibrary" id=2]
-[ext_resource path="res://Assets/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Arrive.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Pill.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Timer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Mob/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Arrive/Arrive.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Mob/Pill/Pill.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Timer/Timer.tscn" type="PackedScene" id=6]
+
+
+
+
+
 
 [node name="Level3" type="Spatial"]
 script = ExtResource( 1 )

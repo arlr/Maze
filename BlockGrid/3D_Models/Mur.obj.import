@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Mur.obj-e58bf02024f7cdddf5bd31a5d954ac67.mesh"
+
+[deps]
+
+files=[ "res://.import/Mur.obj-e58bf02024f7cdddf5bd31a5d954ac67.mesh" ]
+
+source_file="res://BlockGrid/3D_Models/Mur.obj"
+dest_files=[ "res://.import/Mur.obj-e58bf02024f7cdddf5bd31a5d954ac67.mesh", "res://.import/Mur.obj-e58bf02024f7cdddf5bd31a5d954ac67.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

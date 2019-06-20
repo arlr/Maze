@@ -1,7 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Code/Player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mob/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Mob/Player/HUD.tscn" type="PackedScene" id=2]
+
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -15,6 +16,10 @@ albedo_color = Color( 0.392157, 0.431373, 0.870588, 1 )
 [node name="KinematicBody" type="KinematicBody" parent="."]
 transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
 script = ExtResource( 1 )
+
+[node name="State" type="Node" parent="KinematicBody"]
+
+[node name="Move" type="Node" parent="KinematicBody/State"]
 
 [node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
 mesh = SubResource( 1 )

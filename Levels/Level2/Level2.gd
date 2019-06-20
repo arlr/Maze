@@ -3,8 +3,6 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
-
 var counterPill = 0
 var nb_LevelPill = 0
 var listChildGridMap
@@ -15,9 +13,6 @@ func _ready():
 		var nameNode = node.name
 		if nameNode.begins_with("Pill"):
 			nb_LevelPill += 1
-		
-		
-	
 	
 func _input(event):
 	

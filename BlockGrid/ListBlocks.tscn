@@ -1,8 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://3D_Models/arrive.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://3D_Models/lamp.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://3D_Models/Mur.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://BlockGrid/3D_Models/arrive.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://BlockGrid/3D_Models/lamp.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://BlockGrid/3D_Models/Mur.obj" type="ArrayMesh" id=3]
+
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( 1, -0.001287, 1, 1, -0.001287, -1, -1, -0.001287, 1, -1, -0.001287, -1, -1, 1.99871, -1, 1, 1.99871, -0.999999, -1, 1.99871, 1, 0.999999, 1.99871, 1, 1, 1.99871, -0.999999, 1, -0.001287, -1, 0.999999, 1.99871, 1, 1, -0.001287, 1, 0.999999, 1.99871, 1, 1, -0.001287, 1, -1, 1.99871, 1, -1, -0.001287, 1, -1, 1.99871, 1, -1, -0.001287, 1, -1, 1.99871, -1, -1, -0.001287, -1, 1, -0.001287, -1, 1, 1.99871, -0.999999, -1, -0.001287, -1, -1, 1.99871, -1 )

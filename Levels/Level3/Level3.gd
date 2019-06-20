@@ -3,8 +3,6 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
-
 var counterPill = 0
 var nb_LevelPill = 0
 var listChildGridMap

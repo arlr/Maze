@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lamp.obj-0df7b374a1ecd2bdbab0ad66fa512f36.mesh"
+
+[deps]
+
+files=[ "res://.import/lamp.obj-0df7b374a1ecd2bdbab0ad66fa512f36.mesh" ]
+
+source_file="res://BlockGrid/3D_Models/lamp.obj"
+dest_files=[ "res://.import/lamp.obj-0df7b374a1ecd2bdbab0ad66fa512f36.mesh", "res://.import/lamp.obj-0df7b374a1ecd2bdbab0ad66fa512f36.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
