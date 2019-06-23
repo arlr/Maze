@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Maze"
 config/icon="res://Img/Icon.png"
 
+[autoload]
+
+VariableGlobal="*res://VariableGlobal.gd"
+
 [display]
 
 window/size/width=1280
