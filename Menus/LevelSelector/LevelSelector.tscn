@@ -1,139 +1,87 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Fonts/Menu_FontDynamic.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Menus/LevelSelector/LevelSelectorBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Menus/LevelSelector/LevelSelector.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Menu_FontDynamic.tres" type="DynamicFont" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Button
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
 
 [node name="LevelSelector" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -146.5
+margin_right = 146.5
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-margin_right = 1280.0
+[node name="Titre" type="Label" parent="VBoxContainer"]
+margin_right = 398.0
 margin_bottom = 55.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Level Selector"
 align = 1
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
 margin_top = 59.0
-margin_right = 1280.0
-margin_bottom = 323.0
+margin_right = 398.0
+margin_bottom = 189.0
 grow_horizontal = 2
 columns = 8
 
-[node name="LevelSelectorBox" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
+[node name="Lv1" type="Button" parent="VBoxContainer/GridContainer"]
 margin_right = 130.0
 margin_bottom = 130.0
+rect_min_size = Vector2( 130, 130 )
+custom_fonts/font = ExtResource( 2 )
+action_mode = 0
+text = "LV 1"
+flat = true
 
-[node name="LevelSelectorBox2" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Lv2" type="Button" parent="VBoxContainer/GridContainer"]
 margin_left = 134.0
-margin_top = 0.0
 margin_right = 264.0
 margin_bottom = 130.0
+rect_min_size = Vector2( 130, 130 )
+custom_fonts/font = ExtResource( 2 )
+action_mode = 0
+text = "LV 2"
+flat = true
 
-[node name="LevelSelectorBox9" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Lv3" type="Button" parent="VBoxContainer/GridContainer"]
 margin_left = 268.0
-margin_top = 0.0
 margin_right = 398.0
 margin_bottom = 130.0
+rect_min_size = Vector2( 130, 130 )
+custom_fonts/font = ExtResource( 2 )
+action_mode = 0
+text = "LV 3"
+flat = true
 
-[node name="LevelSelectorBox3" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 402.0
-margin_top = 0.0
-margin_right = 532.0
-margin_bottom = 130.0
-
-[node name="LevelSelectorBox4" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 536.0
-margin_top = 0.0
-margin_right = 666.0
-margin_bottom = 130.0
-
-[node name="LevelSelectorBox5" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 670.0
-margin_top = 0.0
-margin_right = 800.0
-margin_bottom = 130.0
-
-[node name="LevelSelectorBox6" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 804.0
-margin_top = 0.0
-margin_right = 934.0
-margin_bottom = 130.0
-
-[node name="LevelSelectorBox7" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 938.0
-margin_top = 0.0
-margin_right = 1068.0
-margin_bottom = 130.0
-
-[node name="LevelSelectorBox8" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 134.0
-margin_right = 130.0
-margin_bottom = 264.0
-
-[node name="LevelSelectorBox10" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 134.0
-margin_top = 134.0
-margin_right = 264.0
-margin_bottom = 264.0
-
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 327.0
-margin_right = 1280.0
-margin_bottom = 388.0
-
-[node name="Retour" type="Button" parent="VBoxContainer/CenterContainer"]
-margin_left = 564.0
-margin_right = 716.0
-margin_bottom = 61.0
-custom_fonts/font = ExtResource( 1 )
+[node name="Retour" type="Button" parent="VBoxContainer"]
+margin_top = 193.0
+margin_right = 398.0
+margin_bottom = 254.0
+custom_fonts/font = ExtResource( 2 )
 text = "Retour"
 flat = true
+script = SubResource( 1 )
+[connection signal="pressed" from="VBoxContainer/GridContainer/Lv1" to="." method="_on_Lv1_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Lv2" to="." method="_on_Lv2_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Lv3" to="." method="_on_Lv3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Retour" to="." method="_on_Retour_pressed"]

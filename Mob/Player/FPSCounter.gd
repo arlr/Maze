@@ -15,13 +15,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_key_pressed(KEY_H) and affiche == true:
-		affiche = false
-		
-	if Input.is_key_pressed(KEY_F) and affiche == false:
-		affiche = true
-	
+	self.text = 'FPS: ' + str(Engine.get_frames_per_second())
+	if Input.is_action_just_pressed("FPS"):
+		affiche =! affiche
+
 	if affiche:
-		self.text = 'FPS: ' + str(Engine.get_frames_per_second())
+		self.show()
 	else:
-		self.text = ''
+		self.hide()

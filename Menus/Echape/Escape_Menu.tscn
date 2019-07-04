@@ -4,16 +4,24 @@
 [ext_resource path="res://Fonts/Title_FontDynamic.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Fonts/Menu_FontDynamic.tres" type="DynamicFont" id=3]
 
-
-
 [node name="Escape_Menu" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+pause_mode = 2
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.192157, 0.192157, 0.192157, 0.529412 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -26,7 +34,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/VBoxContainer"]
 margin_top = 111.0
 margin_right = 410.0
 margin_bottom = 203.0
@@ -38,23 +46,29 @@ text = "MAZE"
 align = 1
 valign = 1
 
-[node name="BP_Continer" type="MenuButton" parent="VBoxContainer"]
+[node name="BP_Continer" type="MenuButton" parent="CanvasLayer/ColorRect/VBoxContainer"]
+pause_mode = 2
 margin_top = 207.0
 margin_right = 410.0
 margin_bottom = 268.0
 custom_fonts/font = ExtResource( 3 )
 text = "Continer"
 
-[node name="BP_Menu" type="MenuButton" parent="VBoxContainer"]
+[node name="BP_Menu" type="MenuButton" parent="CanvasLayer/ColorRect/VBoxContainer"]
+pause_mode = 2
 margin_top = 272.0
 margin_right = 410.0
 margin_bottom = 333.0
 custom_fonts/font = ExtResource( 3 )
 text = "Menu"
 
-[node name="BP_Quitter" type="MenuButton" parent="VBoxContainer"]
+[node name="BP_Quitter" type="MenuButton" parent="CanvasLayer/ColorRect/VBoxContainer"]
+pause_mode = 2
 margin_top = 337.0
 margin_right = 410.0
 margin_bottom = 398.0
 custom_fonts/font = ExtResource( 3 )
 text = "Quitter"
+[connection signal="pressed" from="CanvasLayer/ColorRect/VBoxContainer/BP_Continer" to="." method="_on_BP_Continer_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/VBoxContainer/BP_Menu" to="." method="_on_BP_Menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/VBoxContainer/BP_Quitter" to="." method="_on_BP_Quitter_pressed"]

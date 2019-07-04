@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Fonts/Title_FontDynamic.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Fonts/Menu_FontDynamic.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Menus/Main_Menu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Title_FontDynamic.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fonts/Menu_FontDynamic.tres" type="DynamicFont" id=3]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_left = 0.5
@@ -24,7 +26,7 @@ margin_left = 2.0
 margin_top = 49.0
 margin_right = 185.0
 margin_bottom = 141.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 6
 custom_constants/shadow_offset_y = 7
@@ -39,7 +41,7 @@ alignment = 1
 [node name="BP_ListeLvl" type="MenuButton" parent="HBoxContainer/VBoxContainer"]
 margin_right = 368.0
 margin_bottom = 61.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "Liste des Niveaux"
 align = 0
 
@@ -47,7 +49,7 @@ align = 0
 margin_top = 65.0
 margin_right = 368.0
 margin_bottom = 126.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "Scores"
 align = 0
 
@@ -55,6 +57,8 @@ align = 0
 margin_top = 130.0
 margin_right = 368.0
 margin_bottom = 191.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "Quitter"
 align = 0
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/BP_ListeLvl" to="." method="_on_BP_ListeLvl_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/BP_Quitter" to="." method="_on_BP_Quitter_pressed"]
