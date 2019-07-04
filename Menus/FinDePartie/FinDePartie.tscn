@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/Title_FontDynamic.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/Menu_FontDynamic.tres" type="DynamicFont" id=2]
+
+[node name="FinDePartie" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.262745 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -367.0
+margin_top = -284.0
+margin_right = 367.0
+margin_bottom = 284.0
+
+[node name="Gagne" type="Label" parent="CanvasLayer/ColorRect/VBoxContainer"]
+margin_right = 734.0
+margin_bottom = 92.0
+custom_fonts/font = ExtResource( 1 )
+text = "Gagné"
+align = 1
+
+[node name="Temp" type="Label" parent="CanvasLayer/ColorRect/VBoxContainer"]
+margin_top = 96.0
+margin_right = 734.0
+margin_bottom = 151.0
+custom_fonts/font = ExtResource( 2 )
+text = "Temps"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/ColorRect/VBoxContainer"]
+margin_top = 155.0
+margin_right = 734.0
+margin_bottom = 220.0
+custom_fonts/font = ExtResource( 2 )
+text = "Votre Nom"
+align = 1
+max_length = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect/VBoxContainer"]
+margin_top = 224.0
+margin_right = 734.0
+margin_bottom = 244.0
+alignment = 1
+
+[node name="Rejouer" type="Button" parent="CanvasLayer/ColorRect/VBoxContainer/HBoxContainer"]
+margin_left = 305.0
+margin_right = 366.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 2 )
+text = "Rejouer"
+flat = true
+align = 2
+
+[node name="Suivant" type="Button" parent="CanvasLayer/ColorRect/VBoxContainer/HBoxContainer"]
+margin_left = 370.0
+margin_right = 428.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 2 )
+text = "Suivant"
+flat = true

@@ -19,7 +19,6 @@ func _on_BP_Continer_pressed():
 func _on_BP_Quitter_pressed():
 	get_tree().quit()
 
-
 func _on_BP_Menu_pressed():
 	node.hide()
 	node.queue_free()
