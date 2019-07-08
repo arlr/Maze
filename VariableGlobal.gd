@@ -1,46 +1,51 @@
 extends Node
 
+var time_lvl = [0,0,0]
+var list_lvl = []
 # https://docs.godotengine.org/en/3.1/getting_started/step_by_step/singletons_autoload.html#custom-scene-switcher
 onready var current_scene = null
 var Level = null
+var Nb_Level = 0
+var actual_lvl = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() -1)
+	level_counter()
+	actual_lvl = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 func goto_scene(path):
-    # This function will usually be called from a signal callback,
-    # or some other function in the current scene.
-    # Deleting the current scene at this point is
-    # a bad idea, because it may still be executing code.
-    # This will result in a crash or unexpected behavior.
+	# This function will usually be called from a signal callback,
+	# or some other function in the current scene.
+	# Deleting the current scene at this point is
+	# a bad idea, because it may still be executing code
+	# This will result in a crash or unexpected behavior.
 
-    # The solution is to defer the load to a later time, when
-    # we can be sure that no code from the current scene is running:
+	# The solution is to defer the load to a later time, when
+	# we can be sure that no code from the current scene is running:
 
-    call_deferred("_deferred_goto_scene", path)
+	call_deferred("_deferred_goto_scene", path)
 
 func _deferred_goto_scene(path):
-    # It is now safe to remove the current scene
+	# It is now safe to remove the current scene
 	current_scene.queue_free()	#https://godotengine.org/qa/4062/freeing-objects-nodes
 
-    # Load the new scene.
+	# Load the new scene.
 	var s = ResourceLoader.load(path)
 
-    # Instance the new scene.
+	# Instance the new scene.
 	current_scene = s.instance()
-    # Add it to the active scene, as child of root.
+	# Add it to the active scene, as child of root.
 	get_tree().get_root().add_child(current_scene)
 
-    # Optionally, to make it compatible with the SceneTree.change_scene() API.
+	# Optionally, to make it compatible with the SceneTree.change_scene() API.
 	get_tree().set_current_scene(current_scene)
 	
 
 func _input(event):
-	
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		#Level = current_scene.filename
@@ -53,4 +58,25 @@ func _input(event):
 		add_child(PauseMenuNode)
 		PauseMenuNode.show()
 		print(PauseMenuNode)
-		#PauseMenu.visible = pause
+		#PauseMenu.visible = pause*
+		
+func level_counter():
+	var path = "res://Levels"
+	list_lvl = []
+	var dir = Directory.new()
+	var nb_folder = 0
+	if dir.open(path) == OK:
+		print_debug("coucou")
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while (file_name != ""):
+			if dir.current_is_dir() and file_name.begins_with("Lev"):
+				nb_folder += 1
+				print_debug(file_name)
+				list_lvl.append(file_name)
+			file_name = dir.get_next()
+	else:
+		print_debug("An error occurred when trying to access the path.")
+	list_lvl.invert()	#On inverse le tableau car le dernier niveau est à l'indice 0
+	Nb_Level = nb_folder
+		

@@ -22,4 +22,14 @@ func _on_Area_Finish_body_entered(body):
 		if get_parent().get_parent().get_parent().counterPill == get_parent().get_parent().get_parent().nb_LevelPill:
 			get_parent().get_parent().get_parent().get_node("Timer").set_autostart(false)
 			finished = true
+			affiche_fin()
 			print("WIN")
+
+
+func affiche_fin():
+	print_debug(VariableGlobal.actual_lvl)
+	var Fin_Menu = preload("res://Menus/FinDePartie/FinDePartie.tscn")
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	var Fin_MenuNode = Fin_Menu.instance()
+	add_child(Fin_MenuNode)
+	Fin_MenuNode.show()

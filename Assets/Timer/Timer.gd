@@ -36,7 +36,9 @@ func printTime():
 		if ss >= 60:
 			ss = 0
 			mm += 1
-
+	VariableGlobal.time_lvl[0] = mm
+	VariableGlobal.time_lvl[1] = ss
+	VariableGlobal.time_lvl[2] = ms
 	prettyTime = ("Temps : " + str(mm) + ":" + str(ss) + ":" + str(ms))
 		
 	

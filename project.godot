@@ -22,6 +22,7 @@ config/icon="res://Img/Icon.png"
 [autoload]
 
 VariableGlobal="*res://VariableGlobal.gd"
+Save="*res://Saves/Save.gd"
 
 [display]
 
