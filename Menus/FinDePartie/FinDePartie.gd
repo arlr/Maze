@@ -16,8 +16,9 @@ func _ready():
 func _on_Suivant_pressed():
 	var next_lvl = VariableGlobal.list_lvl[VariableGlobal.actual_lvl + 1]
 	print_debug(next_lvl)
+	var name_save = str(VariableGlobal.list_lvl[VariableGlobal.actual_lvl])
 	next_lvl = "res://Levels/" + str(next_lvl) + "/" + str(next_lvl) + ".tscn"
-	Save.Save(next_lvl,NomJoueur,VariableGlobal.time_lvl)
+	Save.Save(name_save,NomJoueur,VariableGlobal.time_lvl)
 	VariableGlobal.goto_scene(next_lvl)
 
 
@@ -25,10 +26,15 @@ func _on_Rejouer_pressed():
 	
 	var next_lvl = VariableGlobal.list_lvl[VariableGlobal.actual_lvl]
 	print_debug(next_lvl)
+	var name_save = str(VariableGlobal.list_lvl[VariableGlobal.actual_lvl])
 	next_lvl = "res://Levels/" + str(next_lvl) + "/" + str(next_lvl) + ".tscn"
-	Save.Save(next_lvl,NomJoueur,VariableGlobal.time_lvl)
+	Save.Save(name_save,NomJoueur,VariableGlobal.time_lvl)
 	VariableGlobal.goto_scene(next_lvl)
 
 
 func _on_Nom_Joueur_text_entered(new_text):
+	NomJoueur = new_text
+
+
+func _on_Nom_Joueur_text_changed(new_text):
 	NomJoueur = new_text

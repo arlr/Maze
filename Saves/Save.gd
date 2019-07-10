@@ -16,12 +16,16 @@ func Save(lvl,nom_joueur,score):
 	var save = File.new()
 	var name_save = str(lvl) + "_save.txt"
 	var contenu = []
-	save.open("res://Saves/"+name_save, File.WRITE_READ)
+	var text = str(contenu) + "_" + str(score)
+	print_debug(lvl)
+	print_debug("res://Saves/"+name_save)
+	save.open("res://Saves/"+name_save, File.READ_WRITE)
 	contenu = save.get_csv_line("$")
-	contenu.append(str(nom_joueur)+"_"+str(score))
-	print_debug(contenu)
-	save.store_csv_line(contenu,"$")
+	contenu.append(text)
+	print_debug(text)
+	save.store_csv_line(text,"$")
 	save.close()
 	
+
 	
 	

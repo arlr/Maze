@@ -72,6 +72,7 @@ margin_bottom = 61.0
 custom_fonts/font = ExtResource( 3 )
 text = "Suivant"
 flat = true
+[connection signal="text_changed" from="CanvasLayer/ColorRect/VBoxContainer/Nom_Joueur" to="." method="_on_Nom_Joueur_text_changed"]
 [connection signal="text_entered" from="CanvasLayer/ColorRect/VBoxContainer/Nom_Joueur" to="." method="_on_Nom_Joueur_text_entered"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/VBoxContainer/HBoxContainer/Rejouer" to="." method="_on_Rejouer_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/VBoxContainer/HBoxContainer/Suivant" to="." method="_on_Suivant_pressed"]
