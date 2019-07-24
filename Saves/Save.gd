@@ -16,7 +16,7 @@ func Save(lvl,nom_joueur,score):
 	var save = File.new()
 	var name_save = str(lvl) + "_save.txt"	#Le nom du fichier de sauvegarde prend le numéro du niveau avec "_save.txt"
 	var contenu = []
-	var text = str(contenu) + "_" + str(score)
+	var text = str(nom_joueur) + "_" + str(score)
 	print_debug(lvl)
 	print_debug("res://Saves/"+name_save)
 	if save.file_exists("res://Saves/"+name_save) == true:	#Si le fichier existe on lit son contenu pour le réecrire en y ajoutant les nouvelles valeurs

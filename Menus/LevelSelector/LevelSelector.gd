@@ -18,11 +18,13 @@ func _on_Retour_pressed():
 
 func _on_Lv1_pressed():
 	VariableGlobal._deferred_goto_scene("res://Levels/Level1/Level1.tscn")
+	VariableGlobal.actual_lvl = 1
 
 
 func _on_Lv2_pressed():
 	VariableGlobal._deferred_goto_scene("res://Levels/Level2/Level2.tscn")
-
+	VariableGlobal.actual_lvl = 2
 
 func _on_Lv3_pressed():
 	VariableGlobal._deferred_goto_scene("res://Levels/Level3/Level3.tscn")
+	VariableGlobal.actual_lvl = 3

@@ -11,7 +11,7 @@ var actual_lvl = 0
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() -1)
-	level_counter()
+	level_counter()	#Compte automatiquement le nombre de niveaux
 	actual_lvl = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -61,6 +61,9 @@ func _input(event):
 		#PauseMenu.visible = pause*
 		
 func level_counter():
+	"""
+	@bref Compte automatiquement le nombre de niveau dans le jeu
+	"""
 	var path = "res://Levels"
 	list_lvl = []
 	var dir = Directory.new()
@@ -70,13 +73,15 @@ func level_counter():
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while (file_name != ""):
-			if dir.current_is_dir() and file_name.begins_with("Lev"):
+			if dir.current_is_dir() and file_name.begins_with("Lev"):	#Compte le nombre de fichier commençant par "Lev"
 				nb_folder += 1
 				print_debug(file_name)
 				list_lvl.append(file_name)
 			file_name = dir.get_next()
+		
 	else:
 		print_debug("An error occurred when trying to access the path.")
 	list_lvl.invert()	#On inverse le tableau car le dernier niveau est à l'indice 0
 	Nb_Level = nb_folder
+	print_debug("Liste level : " + str(list_lvl) + " | Nb de Level : " + str(Nb_Level) )
 		
