@@ -69,7 +69,7 @@ func level_counter():
 	var dir = Directory.new()
 	var nb_folder = 0
 	if dir.open(path) == OK:
-		print_debug("coucou")
+		print_debug("Comptage du nombre de Niveaux")
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while (file_name != ""):
@@ -81,7 +81,7 @@ func level_counter():
 		
 	else:
 		print_debug("An error occurred when trying to access the path.")
-	list_lvl.invert()	#On inverse le tableau car le dernier niveau est à l'indice 0
+	list_lvl.sort()	#trie le tableau par ordre alphabetique
 	Nb_Level = nb_folder
 	print_debug("Liste level : " + str(list_lvl) + " | Nb de Level : " + str(Nb_Level) )
 		
