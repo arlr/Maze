@@ -70,4 +70,5 @@ custom_fonts/font = ExtResource( 3 )
 text = "Quitter"
 align = 0
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/BP_ListeLvl" to="." method="_on_BP_ListeLvl_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/BP_Options" to="." method="_on_BP_Options_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/BP_Quitter" to="." method="_on_BP_Quitter_pressed"]

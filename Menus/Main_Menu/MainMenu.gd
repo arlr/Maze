@@ -11,5 +11,11 @@ func _ready():
 func _on_BP_ListeLvl_pressed():
 	VariableGlobal.goto_scene("res://Menus/LevelSelector/LevelSelector.tscn")
 
+
+func _on_BP_Options_pressed():
+	VariableGlobal.goto_scene("res://Menus/Options/OptionMenu.tscn")
+
 func _on_BP_Quitter_pressed():
 	get_tree().quit()
+
+
