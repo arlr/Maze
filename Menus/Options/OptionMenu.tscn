@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/Title_FontDynamic.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/Menu_FontDynamic.tres" type="DynamicFont" id=2]
+
+[node name="OptionMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Options" type="Label" parent="VBoxContainer"]
+margin_right = 269.0
+margin_bottom = 92.0
+custom_fonts/font = ExtResource( 1 )
+text = "Options"
+align = 1
+uppercase = true
+
+[node name="BP_Touches" type="MenuButton" parent="VBoxContainer"]
+margin_top = 96.0
+margin_right = 269.0
+margin_bottom = 157.0
+custom_fonts/font = ExtResource( 2 )
+text = "Touches"
+
+[node name="BP_Retour" type="MenuButton" parent="VBoxContainer"]
+margin_top = 161.0
+margin_right = 269.0
+margin_bottom = 222.0
+custom_fonts/font = ExtResource( 2 )
+text = "Retour"

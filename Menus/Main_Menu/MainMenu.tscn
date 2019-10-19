@@ -15,17 +15,17 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -295.0
-margin_top = -95.5
+margin_top = -95.0
 margin_right = 295.0
-margin_bottom = 95.5
+margin_bottom = 176.0
 custom_constants/separation = 34
 alignment = 1
 
 [node name="Title" type="Label" parent="HBoxContainer"]
 margin_left = 2.0
-margin_top = 49.0
+margin_top = 89.0
 margin_right = 185.0
-margin_bottom = 141.0
+margin_bottom = 181.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 6
@@ -35,28 +35,37 @@ text = "MAZE"
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 219.0
 margin_right = 587.0
-margin_bottom = 191.0
+margin_bottom = 271.0
 alignment = 1
 
 [node name="BP_ListeLvl" type="MenuButton" parent="HBoxContainer/VBoxContainer"]
+margin_top = 7.0
 margin_right = 368.0
-margin_bottom = 61.0
+margin_bottom = 68.0
 custom_fonts/font = ExtResource( 3 )
 text = "Liste des Niveaux"
 align = 0
 
 [node name="BP_Scores" type="MenuButton" parent="HBoxContainer/VBoxContainer"]
-margin_top = 65.0
+margin_top = 72.0
 margin_right = 368.0
-margin_bottom = 126.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 3 )
 text = "Scores"
 align = 0
 
-[node name="BP_Quitter" type="MenuButton" parent="HBoxContainer/VBoxContainer"]
-margin_top = 130.0
+[node name="BP_Options" type="MenuButton" parent="HBoxContainer/VBoxContainer"]
+margin_top = 137.0
 margin_right = 368.0
-margin_bottom = 191.0
+margin_bottom = 198.0
+custom_fonts/font = ExtResource( 3 )
+text = "Options"
+align = 0
+
+[node name="BP_Quitter" type="MenuButton" parent="HBoxContainer/VBoxContainer"]
+margin_top = 202.0
+margin_right = 368.0
+margin_bottom = 263.0
 custom_fonts/font = ExtResource( 3 )
 text = "Quitter"
 align = 0
