@@ -21,26 +21,105 @@ grow_vertical = 2
 alignment = 1
 
 [node name="Touches" type="Label" parent="VBoxContainer"]
-margin_top = 120.0
 margin_right = 640.0
-margin_bottom = 212.0
+margin_bottom = 92.0
 custom_fonts/font = ExtResource( 1 )
 text = "Touches"
 align = 1
 uppercase = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 216.0
+[node name="HBoxContainer_Avancer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 96.0
 margin_right = 640.0
-margin_bottom = 216.0
+margin_bottom = 151.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Retour" type="MenuButton" parent="VBoxContainer"]
-margin_top = 220.0
+[node name="Avancer" type="Label" parent="VBoxContainer/HBoxContainer_Avancer"]
+margin_left = 223.0
+margin_right = 401.0
+margin_bottom = 55.0
+custom_fonts/font = ExtResource( 2 )
+text = "Avancer "
+align = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer_Avancer"]
+margin_left = 405.0
+margin_right = 417.0
+margin_bottom = 55.0
+toggle_mode = true
+
+[node name="HBoxContainer_Reculer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 155.0
 margin_right = 640.0
-margin_bottom = 240.0
+margin_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Reculer" type="Label" parent="VBoxContainer/HBoxContainer_Reculer"]
+margin_left = 229.0
+margin_right = 394.0
+margin_bottom = 55.0
+custom_fonts/font = ExtResource( 2 )
+text = "Reculer "
+align = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer_Reculer"]
+margin_left = 398.0
+margin_right = 410.0
+margin_bottom = 55.0
+toggle_mode = true
+
+[node name="HBoxContainer_Gauche" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 214.0
+margin_right = 640.0
+margin_bottom = 269.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Gauche" type="Label" parent="VBoxContainer/HBoxContainer_Gauche"]
+margin_left = 232.0
+margin_right = 392.0
+margin_bottom = 55.0
+custom_fonts/font = ExtResource( 2 )
+text = "Gauche "
+align = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer_Gauche"]
+margin_left = 396.0
+margin_right = 408.0
+margin_bottom = 55.0
+toggle_mode = true
+
+[node name="HBoxContainer_Droite" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 273.0
+margin_right = 640.0
+margin_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Droite" type="Label" parent="VBoxContainer/HBoxContainer_Droite"]
+margin_left = 244.0
+margin_right = 379.0
+margin_bottom = 55.0
+custom_fonts/font = ExtResource( 2 )
+text = "Droite "
+align = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer_Droite"]
+margin_left = 383.0
+margin_right = 395.0
+margin_bottom = 55.0
+toggle_mode = true
+
+[node name="Retour" type="MenuButton" parent="VBoxContainer"]
+margin_top = 332.0
+margin_right = 640.0
+margin_bottom = 393.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/font = ExtResource( 2 )
