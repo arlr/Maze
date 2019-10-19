@@ -13,13 +13,11 @@ func _ready():
 #	pass
 
 func _on_Retour_pressed():
-	VariableGlobal._deferred_goto_scene("res://Menus/Main_Menu/MainMenu.tscn")
-
+	VariableGlobal._deferred_goto_scene(VariableGlobal.old_scene)
 
 func _on_Lv1_pressed():
 	VariableGlobal._deferred_goto_scene("res://Levels/Level1/Level1.tscn")
 	VariableGlobal.actual_lvl = 1
-
 
 func _on_Lv2_pressed():
 	VariableGlobal._deferred_goto_scene("res://Levels/Level2/Level2.tscn")

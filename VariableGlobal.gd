@@ -4,6 +4,7 @@ var time_lvl = [0,0,0]
 var list_lvl = []
 # https://docs.godotengine.org/en/3.1/getting_started/step_by_step/singletons_autoload.html#custom-scene-switcher
 onready var current_scene = null
+onready var old_scene = null
 var Level = null
 var Nb_Level = 0
 var actual_lvl = 0
@@ -26,7 +27,8 @@ func goto_scene(path):
 
 	# The solution is to defer the load to a later time, when
 	# we can be sure that no code from the current scene is running:
-
+	old_scene = current_scene.filename	#Réupère le chemain de la scene actuel à utiliser pour les boutons retour
+	print_debug(" Old scene = " + str(old_scene)) 
 	call_deferred("_deferred_goto_scene", path)
 
 func _deferred_goto_scene(path):
@@ -43,7 +45,7 @@ func _deferred_goto_scene(path):
 
 	# Optionally, to make it compatible with the SceneTree.change_scene() API.
 	get_tree().set_current_scene(current_scene)
-	
+	print_debug("Current scene = " + str(current_scene))
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
