@@ -50,18 +50,20 @@ func _deferred_goto_scene(path):
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		#Level = current_scene.filename
-		#var PauseMenu = get("res://Menus/Echape/Escape_Menu.tscn")
-		#print(PauseMenu)
-		
-		get_tree().paused = true
-		var PauseMenu = preload("res://Menus/Echape/Escape_Menu.tscn")
-		var PauseMenuNode = PauseMenu.instance()
-		add_child(PauseMenuNode)
-		PauseMenuNode.show()
-		print(PauseMenuNode)
-		#PauseMenu.visible = pause*
+		print_debug("current scene = " + str(current_scene.filename))
+		if current_scene.filename != "res://Menus/Main_Menu/MainMenu.tscn" and  current_scene.filename != "res://Menus/LevelSelector/LevelSelector.tscn" and current_scene.filename != "res://Menus/Options/OptionMenu.tscn" and current_scene.filename != "res://Menus/Options/Touches/Affectation_touhes.tscn" and current_scene.filename != "res://Menus/FinDePartie/FinDePartie.tscn":
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			#Level = current_scene.filename
+			#var PauseMenu = get("res://Menus/Echape/Escape_Menu.tscn")
+			#print(PauseMenu)
+			
+			get_tree().paused = true
+			var PauseMenu = preload("res://Menus/Echape/Escape_Menu.tscn")
+			var PauseMenuNode = PauseMenu.instance()
+			add_child(PauseMenuNode)
+			PauseMenuNode.show()
+			print(PauseMenuNode)
+			#PauseMenu.visible = pause*
 		
 func level_counter():
 	"""
