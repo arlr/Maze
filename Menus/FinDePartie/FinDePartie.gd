@@ -19,7 +19,7 @@ func _on_Suivant_pressed():
 	print_debug("Jouer au niveau suivant")
 	print_debug("Numero Level " + str(VariableGlobal.actual_lvl))
 	#Sauvegarde
-	var name_save = str(VariableGlobal.list_lvl[VariableGlobal.actual_lvl])
+	var name_save = str(VariableGlobal.list_lvl[VariableGlobal.actual_lvl-1])
 	Save.Save(name_save,NomJoueur,VariableGlobal.time_lvl)
 	
 	var next_lvl = VariableGlobal.list_lvl[VariableGlobal.actual_lvl]
