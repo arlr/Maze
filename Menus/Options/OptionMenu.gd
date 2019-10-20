@@ -13,5 +13,9 @@ func _ready():
 #	pass
 
 
-func _on_BP_Retour_pressed():
-	VariableGlobal._deferred_goto_scene(VariableGlobal.old_scene)
+func _on_BP_Menu_pressed():
+	VariableGlobal._deferred_goto_scene("res://Menus/Main_Menu/MainMenu.tscn")
+
+
+func _on_BP_Touches_pressed():
+	VariableGlobal._deferred_goto_scene("res://Menus/Options/Touches/Affectation_touhes.tscn")

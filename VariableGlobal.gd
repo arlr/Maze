@@ -27,11 +27,12 @@ func goto_scene(path):
 
 	# The solution is to defer the load to a later time, when
 	# we can be sure that no code from the current scene is running:
-	old_scene = current_scene.filename	#Réupère le chemain de la scene actuel à utiliser pour les boutons retour
-	print_debug(" Old scene = " + str(old_scene)) 
 	call_deferred("_deferred_goto_scene", path)
 
 func _deferred_goto_scene(path):
+	
+	old_scene = current_scene.filename	#Réupère le chemain de la scene actuel à utiliser pour les boutons retour
+	print_debug(" Old scene = " + str(old_scene)) 
 	# It is now safe to remove the current scene
 	current_scene.queue_free()	#https://godotengine.org/qa/4062/freeing-objects-nodes
 

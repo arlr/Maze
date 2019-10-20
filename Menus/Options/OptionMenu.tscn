@@ -33,10 +33,11 @@ margin_bottom = 157.0
 custom_fonts/font = ExtResource( 3 )
 text = "Touches"
 
-[node name="BP_Retour" type="MenuButton" parent="VBoxContainer"]
+[node name="BP_Menu" type="MenuButton" parent="VBoxContainer"]
 margin_top = 161.0
 margin_right = 269.0
 margin_bottom = 222.0
 custom_fonts/font = ExtResource( 3 )
-text = "Retour"
-[connection signal="pressed" from="VBoxContainer/BP_Retour" to="." method="_on_BP_Retour_pressed"]
+text = "Menu"
+[connection signal="pressed" from="VBoxContainer/BP_Touches" to="." method="_on_BP_Touches_pressed"]
+[connection signal="pressed" from="VBoxContainer/BP_Menu" to="." method="_on_BP_Menu_pressed"]
