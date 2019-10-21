@@ -1,4 +1,4 @@
-extends Area
+ extends Area
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -26,10 +26,15 @@ func _on_Area_Finish_body_entered(body):
 			print("WIN")
 
 
+#func affiche_fin():
+#	print_debug(VariableGlobal.actual_lvl)
+#	var Fin_Menu = preload("res://Menus/FinDePartie/FinDePartie.tscn")
+#	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+#	var Fin_MenuNode = Fin_Menu.instance()
+#	add_child(Fin_MenuNode)
+#	Fin_MenuNode.show()
+	
 func affiche_fin():
-	print_debug(VariableGlobal.actual_lvl)
-	var Fin_Menu = preload("res://Menus/FinDePartie/FinDePartie.tscn")
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	var Fin_MenuNode = Fin_Menu.instance()
-	add_child(Fin_MenuNode)
-	Fin_MenuNode.show()
+	VariableGlobal.goto_scene("res://Menus/FinDePartie/FinDePartie.tscn")
+	

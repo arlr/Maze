@@ -6,7 +6,19 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	print_debug("_ready Levelselector")
+	var node = get_node("VBoxContainer/GridContainer")
+	print_debug(get_node("VBoxContainer/GridContainer").get_children())
+	for nb in range(VariableGlobal.Nb_Level):
+		var bp_name = "LV "+str(nb+1)+" Perso"
+		print("LV "+str(nb+1)+"Perso")
+		var bp = Button.new()
+		bp.name = bp_name
+		bp.text = bp_name
+		bp.flat = true
+		bp.ACTION_MODE_BUTTON_PRESS
+		
+		node.add_child(bp)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
