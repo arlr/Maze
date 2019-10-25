@@ -40,50 +40,18 @@ align = 1
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
 margin_top = 59.0
 margin_right = 394.0
-margin_bottom = 189.0
+margin_bottom = 59.0
 grow_horizontal = 2
 custom_constants/vseparation = 3
 custom_constants/hseparation = 2
 columns = 4
 
-[node name="Lv1" type="Button" parent="VBoxContainer/GridContainer"]
-margin_right = 130.0
-margin_bottom = 130.0
-rect_min_size = Vector2( 130, 130 )
-custom_fonts/font = ExtResource( 2 )
-action_mode = 0
-text = "LV 1"
-flat = true
-
-[node name="Lv2" type="Button" parent="VBoxContainer/GridContainer"]
-margin_left = 132.0
-margin_right = 262.0
-margin_bottom = 130.0
-rect_min_size = Vector2( 130, 130 )
-custom_fonts/font = ExtResource( 2 )
-action_mode = 0
-text = "LV 2"
-flat = true
-
-[node name="Lv3" type="Button" parent="VBoxContainer/GridContainer"]
-margin_left = 264.0
-margin_right = 394.0
-margin_bottom = 130.0
-rect_min_size = Vector2( 130, 130 )
-custom_fonts/font = ExtResource( 2 )
-action_mode = 0
-text = "LV 3"
-flat = true
-
 [node name="Retour" type="Button" parent="VBoxContainer"]
-margin_top = 193.0
+margin_top = 63.0
 margin_right = 394.0
-margin_bottom = 254.0
+margin_bottom = 124.0
 custom_fonts/font = ExtResource( 2 )
 text = "Retour"
 flat = true
 script = SubResource( 1 )
-[connection signal="pressed" from="VBoxContainer/GridContainer/Lv1" to="." method="_on_Lv1_pressed"]
-[connection signal="pressed" from="VBoxContainer/GridContainer/Lv2" to="." method="_on_Lv2_pressed"]
-[connection signal="pressed" from="VBoxContainer/GridContainer/Lv3" to="." method="_on_Lv3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Retour" to="." method="_on_Retour_pressed"]
