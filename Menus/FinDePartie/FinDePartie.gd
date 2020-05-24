@@ -14,7 +14,7 @@ func _ready():
 
 func _on_Suivant_pressed():
 	"""
-	@brief : A l'appuis sur le bouton suivant Sauvegarde le score et redirige le joueru sur le niveau suivant
+	@brief : A l'appuis sur le bouton suivant Sauvegarde le score enregistré et redirige le joueur sur le niveau suivant
 	"""
 	print_debug("Jouer au niveau suivant")
 	print_debug("Numero Level " + str(VariableGlobal.actual_lvl))
